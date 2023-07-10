@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-function App() {
+import Settings from "./page/Settings";
+import Chats from "./page/Chats";
+import Dialog from "./page/Dialog";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Підключаємо сторінку Чати за посиланням /chats */}
+        <Route path="/chats" element={<Chats />} />
+
+        {/* Підключаємо сторінку Налаштування за посиланням /settings */}
+        <Route path="/settings" element={<Settings />} />
+
+        {/* Підключаємо сторінку Діалог за посиланням /dialog */}
+        <Route path="/dialog" element={<Dialog />} />
+
+        {/* Якщо користувач заходить на головну сторінку, то його переводять на сторінку /chats */}
+        <Route path="/" element={<Navigate to="/chats" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
