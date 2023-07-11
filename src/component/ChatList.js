@@ -76,12 +76,12 @@ const Time = styled.div`
 
 // Елемент "Іконка"
 const Icon = styled.div`
-  height: 42px; /* Висота іконки */
-  width: 42px; /* Ширина іконки */
+  height: 24px; /* Висота іконки */
+  width: 24px; /* Ширина іконки */
 
   & > svg {
-    height: 42px; /* Висота іконки */
-    width: 42px; /* Ширина іконки */
+    height: 24px; /* Висота іконки */
+    width: 24px; /* Ширина іконки */
   }
 `;
 

@@ -16,6 +16,8 @@ import ChatList from "../component/ChatList";
 
 import CatPhoto from "../file/photo/cat.png";
 import DimaPhoto from "../file/photo/dima.png";
+import AnnPhoto from "../file/photo/ann.png";
+import FamilyPhoto from "../file/photo/family-dog.png";
 
 // ============================================
 // Генеруємо константи, в яких тримаємо дані про список чатів
@@ -31,7 +33,20 @@ const CHATS_LIST = [
     id: 2,
     photo: DimaPhoto,
     name: "Діма",
-    message: "Привіт. Як справи?"
+    message: "Привіт. Як справи?",
+    isUnread: true
+  },
+  {
+    id: 3,
+    photo: AnnPhoto,
+    name: "Дружина",
+    message: "Ти купив хліб?"
+  },
+  {
+    id: 4,
+    photo: FamilyPhoto,
+    name: "Чат родини",
+    message: "Хто вже вдома?"
   },
 ];
 
