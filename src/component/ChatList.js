@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 // Підключаємо іконку непрочитаного повідомлення
 import { ReactComponent as UnreadIcon } from "../file/chat/unread.svg";
+import { ReactComponent as ReadIcon } from "../file/chat/read.svg";
 
 // Генеруємо компонент "Список чатів"
 export default function ChatList({ list }) {
@@ -53,7 +54,7 @@ function ChatItem({
 
               {isRead&& (
                 <Icon>
-                  <UnreadIcon />
+                  <ReadIcon />
                 </Icon>
               )}
             </StatusColumn>
