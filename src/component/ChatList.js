@@ -29,7 +29,8 @@ function ChatItem({
   isUnread,
   isRead,
   time,
-  user
+  user,
+  hashtag
 }) {
   return (
     <React.Fragment key={id}>
@@ -41,6 +42,7 @@ function ChatItem({
               <Name>{name}</Name>
               <User>{user}</User>
               <Message>{message}</Message>
+              <Hashtag>{hashtag}</Hashtag>
             </InfoColumn>
             <StatusColumn>
             <Time>{time}</Time>
@@ -68,6 +70,11 @@ function ChatItem({
     </React.Fragment>
   );
 }
+
+const Hashtag = styled.div`
+  font-size: 14px; /* Розмір тексту */
+  color: #037ee5;/* Колір тексту */
+`;
 
 const User = styled.div`
   font-size: 14px; /* Розмір тексту */
