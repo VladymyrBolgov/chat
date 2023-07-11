@@ -25,7 +25,8 @@ function ChatItem({
 
   messageAmount,
   notifyOff,
-  isUnread
+  isUnread,
+  isRead
 }) {
   return (
     <React.Fragment key={id}>
@@ -45,6 +46,12 @@ function ChatItem({
               )}
 
               {isUnread && (
+                <Icon>
+                  <UnreadIcon />
+                </Icon>
+              )}
+
+              {isRead&& (
                 <Icon>
                   <UnreadIcon />
                 </Icon>

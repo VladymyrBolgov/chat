@@ -28,6 +28,7 @@ const CHATS_LIST = [
     photo: CatPhoto,
     name: "Про котів",
     message: "Я люблю пити молоко",
+    isRead: true
   },
   {
     id: 2,
