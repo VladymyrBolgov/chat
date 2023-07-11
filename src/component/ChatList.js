@@ -28,7 +28,8 @@ function ChatItem({
   notifyOff,
   isUnread,
   isRead,
-  time
+  time,
+  user
 }) {
   return (
     <React.Fragment key={id}>
@@ -38,6 +39,7 @@ function ChatItem({
           <Row>
             <InfoColumn>
               <Name>{name}</Name>
+              <User>{user}</User>
               <Message>{message}</Message>
             </InfoColumn>
             <StatusColumn>
@@ -66,6 +68,11 @@ function ChatItem({
     </React.Fragment>
   );
 }
+
+const User = styled.div`
+  font-size: 14px; /* Розмір тексту */
+  color: #111;/* Колір тексту */
+`;
 // Елемент "Повідомлення"
 const Message = styled.div`
   font-size: 14px; /* Розмір тексту */

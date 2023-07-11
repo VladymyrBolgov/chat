@@ -54,7 +54,8 @@ const CHATS_LIST = [
     message: "Хто вже вдома?",
     messageAmount: 23,
     notifyOff: true,
-    time: "07:54"
+    time: "07:54",
+    user: "Мама"
   },
 ];
 
