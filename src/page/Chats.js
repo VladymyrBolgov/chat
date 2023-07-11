@@ -28,26 +28,33 @@ const CHATS_LIST = [
     photo: CatPhoto,
     name: "Про котів",
     message: "Я люблю пити молоко",
-    isRead: true
+    isRead: true,
+    time: "10:34"
   },
   {
     id: 2,
     photo: DimaPhoto,
     name: "Діма",
     message: "Привіт. Як справи?",
-    isUnread: true
+    isUnread: true,
+    time: "09:21"
   },
   {
     id: 3,
     photo: AnnPhoto,
     name: "Дружина",
-    message: "Ти купив хліб?"
+    message: "Ти купив хліб?",
+    messageAmount: 10,
+    time: "08:46"
   },
   {
     id: 4,
     photo: FamilyPhoto,
     name: "Чат родини",
-    message: "Хто вже вдома?"
+    message: "Хто вже вдома?",
+    messageAmount: 23,
+    notifyOff: true,
+    time: "07:54"
   },
 ];
 

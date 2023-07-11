@@ -27,7 +27,8 @@ function ChatItem({
   messageAmount,
   notifyOff,
   isUnread,
-  isRead
+  isRead,
+  time
 }) {
   return (
     <React.Fragment key={id}>
@@ -40,6 +41,7 @@ function ChatItem({
               <Message>{message}</Message>
             </InfoColumn>
             <StatusColumn>
+            <Time>{time}</Time>
               {messageAmount && (
                 <MessageAmount notifyOff={notifyOff}>
                   {messageAmount}
@@ -78,7 +80,7 @@ const Name = styled.div`
 
 // Елемент "Час"
 const Time = styled.div`
-  font-size: 24px; /* Розмір тексту */
+  font-size: 14px; /* Розмір тексту */
   color: #8e8e93; /* Колір тексту */
 `;
 
@@ -99,13 +101,13 @@ const MessageAmount = styled.div`
   color: #fff; /* Колір тексту */
   background-color: #037ee5; /* Колір фону */
   padding: 2px 10px; /* Внутрішні відступи тексту від країв блоку */
-  border-radius: 0px; /* Закруглення країв блоку */
+  border-radius: 25px; /* Закруглення країв блоку */
 
   ${({ notifyOff }) => {
     if (notifyOff === true) {
       return css`
         /* Змінюємо колір фону якщо notifyOff має значення true */
-        background-color: #037ee5;
+        background-color: #8e8e93;
       `;
     }
   }}
