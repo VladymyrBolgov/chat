@@ -7,9 +7,14 @@ export default function Empty({ children }) {
 
 // Елемент "Текст" для пустого тексту
 const Text = styled.div`
+  /* Колір тексту */
   color: #111;
+  /* Розмір тексту */
   font-size: 16px;
+  /* Відступи вертикальні та горизонтальні */
   padding: 15px;
+  /* Включаємо режим верстки */
   display: flex;
+  /* Робимо текст по центру */
   justify-content: center;
 `;

@@ -58,40 +58,40 @@ function ChatItem({
 }
 // Елемент "Повідомлення"
 const Message = styled.div`
-  font-size: 14px; 
-  color: #8e8e93; 
+  font-size: 14px; /* Розмір тексту */
+  color: #8e8e93; /* Колір тексту */
 `;
 
 // Елемент "Ім'я чату"
 const Name = styled.div`
-  font-size: 16px; 
-  color: #111; 
+  font-size: 16px; /* Розмір тексту */
+  color: #111; /* Колір тексту */
 `;
 
 // Елемент "Час"
 const Time = styled.div`
-  font-size: 24px; 
-  color: #8e8e93; 
+  font-size: 24px; /* Розмір тексту */
+  color: #8e8e93; /* Колір тексту */
 `;
 
 // Елемент "Іконка"
 const Icon = styled.div`
-  height: 42px; 
-  width: 42px; 
+  height: 42px; /* Висота іконки */
+  width: 42px; /* Ширина іконки */
 
   & > svg {
-    height: 42px; 
-    width: 42px; 
+    height: 42px; /* Висота іконки */
+    width: 42px; /* Ширина іконки */
   }
 `;
 
 // Елемент "Скільки непрочитаних повідомлень"
 const MessageAmount = styled.div`
-  font-size: 12px; 
-  color: #fff; 
-  background-color: #037ee5; 
-  padding: 2px 10px; 
-  border-radius: 0px; 
+  font-size: 12px; /* Розмір шрифта */
+  color: #fff; /* Колір тексту */
+  background-color: #037ee5; /* Колір фону */
+  padding: 2px 10px; /* Внутрішні відступи тексту від країв блоку */
+  border-radius: 0px; /* Закруглення країв блоку */
 
   ${({ notifyOff }) => {
     if (notifyOff === true) {
@@ -129,36 +129,51 @@ const Row = styled.div`
 
 // Елемент "Картинка" чату
 const Image = styled.img`
+  /* Задаємо ширину та висоту */
   width: 60px;
   height: 60px;
+  /* Відступ праворуч, щоб текст опції не притискався до картинки */
   margin-right: 16px;
+  /* Відступ зверху та знизу, щоб картинка не налазила на рамку карточки опції */
   margin-top: 8px;
   margin-bottom: 8px;
+  /* Робимо закруглення країв */
   border-radius: 50%;
 `;
 
 // Елемент "Контент", в якому знаходяться основні дані про чат
 const Content = styled.div`
+  /* Задаємо текст  на всю вільну ширину */
   width: 100%;
+  /* Відступ зверху та знизу, щоб елемент не налазив на рамку карточки чату */
   padding-top: 8px;
   padding-bottom: 8px;
+  /* Включаємо режим верстки flex, робимо відображення елементів вертикально */
   display: flex;
   flex-direction: column;
+  /* Робимо вертикальний відступ між елементами */
   gap: 2px;
 `;
 
 // Елемент "Один чат", який відповідає за відображення карточки одного чату
 const Item = styled.div`
+  /* Включаємо режим flex */
   display: flex;
+  /* Відступ справа та зліва, щоб елементи не налазили на краї */
   padding-left: 16px;
   padding-right: 16px;
+  /* Робимо, щоб всі елементи "Заголовок" окрім останнього */
+  /* мали знизу сіру лінію */
   &:not(:last-of-type) > ${Content} {
     border-bottom: 1px solid #d7d7d7;
   }
+  /* Задаємо можливість робити анімацію */
   transition: opacity 0.7s;
-
+  /* Рибимо анімацію при наведені курсором мишки*/
   &:hover {
+    /* Виставляємо прозорість на 50% */
     opacity: 0.5;
+    /* Робимо інший дизайн курсору */
     cursor: pointer;
   }
 `;

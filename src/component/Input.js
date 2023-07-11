@@ -16,13 +16,19 @@ export default function Input({ value, onChange, placeholder }) {
   );
 }
 
-// Створюємо елемент "Поле вводу"
+/// Створюємо елемент "Поле вводу"
 const InputTag = styled.input`
-  box-shadow: none;
-  box-sizing: border-box;
-  width: 100%;
-  border-radius: 30px;
-  border: 1px #d1d1d6 solid;
-  padding: 0 15px;
-  font-size: 14px;
+/* Технічка стилізація */
+box-shadow: none;
+box-sizing: border-box;
+width: 100%;
+
+/* Закруглення країв */
+border-radius: 30px;
+/* Колір і розмір рамок */
+border: 1px #d1d1d6 solid;
+/* Відступи всередині вертикальні (0) та горизонтальні (15px) */
+padding: 0 15px;
+/* Розмір тексту */
+font-size: 14px;
 `;

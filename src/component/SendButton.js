@@ -17,6 +17,7 @@ export default function SendButton({ onClick }) {
 
 // Створюємо елемент "Кнопка відправити"
 const SendButtonTag = styled.div`
+  /* Висота та ширина кнопки */
   height: 32px;
   width: 32px;
 
@@ -25,8 +26,11 @@ const SendButtonTag = styled.div`
     width: 16px;
   }
 
+  /* Закруглення країв */
   border-radius: 0%;
+  /* Колір фону */
   background-color: #007aff;
+
   transition: opacity 0.7s;
 
   &:hover {
